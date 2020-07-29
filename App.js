@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList, Alert,TouchableWithoutFeedback, Keybo
 import Header from './components/header'
 import TodoItem from './components/todoItem'
 import AddTodo from './components/AddTodo'
+import Sandbox from './components/sandbox';
 
 export default function App(){
   const [todos, setTodos] = useState([
@@ -35,6 +36,7 @@ export default function App(){
   }
 
   return (
+    // <Sandbox />
     <TouchableWithoutFeedback onPress={() => {
       Keyboard.dismiss();
       console.log('dismissed keyboaard');
@@ -67,10 +69,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   content: {
-    padding: 40,    
+    padding: 40,
+    flex: 1,  
   },
   list: {
     marginTop: 20,
+    flex: 1
   }
 });
 
