@@ -3,6 +3,7 @@ import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
 import Header from '../shared/header';
 import React from 'react';
+import { Image } from 'react-native';
 
 const screens = {
   Home: {
@@ -10,6 +11,7 @@ const screens = {
     navigationOptions: ({ navigation }) => {
       return {
         headerTitle: () => <Header navigation={navigation} title='GameZone' />,
+        headerBackground: () => <Image source={require('../assets/game_bg.png')} style={{ height:80 }} />
       }
     }
   },
@@ -25,7 +27,8 @@ const screens = {
 const HomeStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
     headerTintColor: '#444',
-    headerStyle: { backgroundColor: '#eee', height: 80 }
+    headerStyle: { backgroundColor: '#eee', height: 80 },
+    
   }
 });
 
